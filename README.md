@@ -1,5 +1,6 @@
-# Encompass Business-Domain in Modules
+# Introduction to Data Transfer Objects
 
 ```bash
-$ nest generate module coffees
+$ nest g class coffees/dto/create-coffee.dto --no-spec
+$ nest g class coffees/dto/update-coffee.dto --no-spec
 ```
