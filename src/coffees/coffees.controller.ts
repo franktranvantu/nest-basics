@@ -1,31 +1,41 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+  Query,
+} from '@nestjs/common';
+import { CoffeesService } from './coffees.service';
 
 @Controller('coffees')
 export class CoffeesController {
+  constructor(private readonly coffeesService: CoffeesService) {}
 
-    @Get()
-    findAll(@Query() pagination): string {
-        const {limit, offset} = pagination;
-        return `List of all coffees. Limit: ${limit}, offset: ${offset}.`;
-    }
+  @Get()
+  findAll(@Query() pagination) {
+    return this.coffeesService.findAll();
+  }
 
-    @Get(':id')
-    findOne(@Param('id') id: string): string {
-        return `This action return #${id} coffee.`;
-    }
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.coffeesService.findOne(id);
+  }
 
-    @Post()
-    create(@Body() body: any): any {
-        return body;
-    }
+  @Post()
+  create(@Body() body: any) {
+    return this.coffeesService.create(body);
+  }
 
-    @Patch(':id')
-    update(@Param('id') id: number, @Body() body: any): string {
-        return `This action updates #${id} coffee.`;
-    }
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() body: any) {
+    return this.coffeesService.update(id, body);
+  }
 
-    @Delete(':id')
-    remove(@Param('id') id: number): string {
-        return `This action removes #${id} coffee.`;
-    }
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.coffeesService.remove(id);
+  }
 }
