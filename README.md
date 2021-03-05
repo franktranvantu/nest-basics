@@ -1,3 +1,5 @@
-# Auto-transform Payloads to DTO instances
+# Running PostgresSQL
 
-Notes: Enable `transform` in `main.ts` to `true`
+```dockerfile
+$ docker-compose up -d
+```
