@@ -8,6 +8,6 @@ export class Coffee {
   name: string;
   @Column()
   brand: string;
-  @Column('json', { nullable: true })
-  flavors: string[];
+  // @Column('json', { nullable: true })
+  // flavors: string[];
 }
