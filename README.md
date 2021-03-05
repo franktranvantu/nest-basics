@@ -1,5 +1,5 @@
-# Running PostgresSQL
+# Introducing the TypeORM Module
 
 ```dockerfile
-$ docker-compose up -d
+$ npm i @nestjs/typeorm typeorm pg mysql
 ```
