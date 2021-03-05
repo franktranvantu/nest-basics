@@ -5,10 +5,16 @@ import {Flavor} from "./flavor.entity";
 export class Coffee {
   @PrimaryGeneratedColumn() // define id and auto increment
   id: number;
+
   @Column()
   name: string;
+
+  @Column({ default: 0 })
+  recommendations: number;
+
   @Column()
   brand: string;
+
   @JoinTable()
   @ManyToMany(
     type => Flavor,
