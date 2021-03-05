@@ -1,5 +1,5 @@
-# Using Repository to Access Database
+# Create a Relation between two Entities
 
-```dockerfile
-$ npm i @nestjs/typeorm typeorm pg mysql
+```bash
+$ nest g class coffees/entities/flavor.entity --no-spec
 ```

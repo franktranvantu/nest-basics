@@ -7,15 +7,6 @@ import {UpdateCoffeeDto} from "./dto/update-coffee.dto";
 
 @Injectable()
 export class CoffeesService {
-  private coffees: Coffee[] = [
-    {
-      id: 1,
-      name: 'Shipwreck Roast',
-      brand: 'Buddy Rew',
-      // flavors: ['chocolate', 'vanilla'],
-    },
-  ];
-
   constructor(
     @InjectRepository(Coffee)
     private readonly coffeeRepository: Repository<Coffee>
