@@ -12,8 +12,8 @@ import {
 @Controller('coffees')
 export class CoffeesController {
   @Get()
-  findAll(@Query() pagination): string {
-    const { limit, offset } = pagination;
+  findAll(@Query() paginationQuery) {
+    const { limit, offset } = paginationQuery;
     return `List of all coffees. Limit: ${limit}, offset: ${offset}.`;
   }
 
