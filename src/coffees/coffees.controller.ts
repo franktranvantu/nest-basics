@@ -17,19 +17,17 @@ export class CoffeesController {
   constructor(private readonly coffeesService: CoffeesService) {}
 
   @Get()
-  findAll(@Query() pagination) {
+  findAll(@Query() paginationQuery) {
     return this.coffeesService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: number) {
-    console.log(typeof id);
+  findOne(@Param('id') id: string) {
     return this.coffeesService.findOne(`${id}`);
   }
 
   @Post()
   create(@Body() createCoffeeDto: CreateCoffeeDto) {
-    console.log(createCoffeeDto instanceof CreateCoffeeDto);
     return this.coffeesService.create(createCoffeeDto);
   }
 
