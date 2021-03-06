@@ -12,18 +12,18 @@ import {
 @Controller('coffees')
 export class CoffeesController {
   @Get()
-  findAll(@Res() res: any): any {
+  findAll(@Res() res: any) {
     res.status(200).send('List of all coffees');
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): string {
+  findOne(@Param('id') id: string) {
     return `This action return #${id} coffee.`;
   }
 
   @Post()
   @HttpCode(HttpStatus.GONE)
-  create(@Body() body: any): any {
+  create(@Body() body: any) {
     return body;
   }
 }
