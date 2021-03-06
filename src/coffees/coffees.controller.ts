@@ -11,27 +11,27 @@ import {
 @Controller('coffees')
 export class CoffeesController {
   @Get()
-  findAll(): string {
+  findAll() {
     return 'List of all coffees';
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): string {
+  findOne(@Param('id') id: string) {
     return `This action return #${id} coffee.`;
   }
 
   @Post()
-  create(@Body() body: any): any {
+  create(@Body() body: any) {
     return body;
   }
 
   @Patch(':id')
-  update(@Param('id') id: number, @Body() body: any): string {
+  update(@Param('id') id: string, @Body() body: any) {
     return `This action updates #${id} coffee.`;
   }
 
   @Delete(':id')
-  remove(@Param('id') id: number): string {
+  remove(@Param('id') id: string) {
     return `This action removes #${id} coffee.`;
   }
 }
