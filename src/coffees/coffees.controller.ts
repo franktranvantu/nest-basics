@@ -15,7 +15,7 @@ export class CoffeesController {
   constructor(private readonly coffeesService: CoffeesService) {}
 
   @Get()
-  findAll(@Query() pagination) {
+  findAll(@Query() paginationQuery) {
     return this.coffeesService.findAll();
   }
 
