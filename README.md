@@ -1,5 +1,6 @@
 # Introducing the TypeORM Module
 
-```dockerfile
+```bash
 $ npm i @nestjs/typeorm typeorm pg mysql
+$ npm i @nestjs/config
 ```
