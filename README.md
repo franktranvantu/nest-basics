@@ -3,7 +3,7 @@
 ```typescript
 // String-valued token
 {
-  provide: 'COFFEE_BRANDS', // 👈
+  provide: 'COFFEE_BRANDS',
   useValue: ['buddy brew', 'nescafe'] // array of coffee brands,
 },
 
