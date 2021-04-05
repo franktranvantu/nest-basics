@@ -2,4 +2,5 @@
 
 ```bash
 $ nest generate module coffees
+$ nest g mo coffees
 ```
