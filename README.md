@@ -4,7 +4,9 @@ Learn everything you need to master NestJS and tackle modern backend application
 ## Installation
 
 ```bash
-$ npm install
+$ node --version
+$ npm install -g @nestjs/cli
+$ nest --version
 ```
 
 ## Running the app
