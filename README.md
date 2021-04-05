@@ -5,6 +5,11 @@ $ npm i class-validator class-transformer
 $ npm i @nestjs/mapped-types 
 ```
 
+Add validationPipe to `main.ts`
+```typescript
+app.useGlobalPipes(new ValidationPipe());
+```
+
 ```json
 curl --location --request POST 'localhost:3000/coffees' \
 --header 'Content-Type: application/json' \
