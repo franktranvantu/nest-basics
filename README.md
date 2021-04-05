@@ -9,6 +9,13 @@ $ npm install -g @nestjs/cli
 $ nest --version
 ```
 
+## Generating our first NestJS Application
+```bash
+$ nest new app-name
+$ cd app-name
+$ npm run start
+```
+
 ## Running the app
 
 ```bash
